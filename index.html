@@ -60,7 +60,6 @@ body {
     background-size: 200% 100%;
 }
 
-/* --- global cursor-follow effect: an ambient glow with a small tracking ring --- */
 .cursor-glow, .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; }
 .cursor-glow {
     width: 260px; height: 260px; margin-left: -130px; margin-top: -130px;
@@ -89,7 +88,6 @@ h1, h2, h3, .display-2, .display-4 {
 
 a { color: var(--accent); }
 
-/* --- entrance (single orchestrated moment, hero only) --- */
 .enter {
     opacity: 0;
     transform: translateY(16px);
@@ -100,7 +98,6 @@ a { color: var(--accent); }
 .enter-3 { animation-delay: 0.25s; }
 @keyframes enterUp { to { opacity: 1; transform: translateY(0); } }
 
-/* --- NAV --- */
 .navbar {
     background: rgba(20, 27, 23, 0.88) !important;
     backdrop-filter: blur(12px);
@@ -122,16 +119,13 @@ a { color: var(--accent); }
 .navbar-toggler { border-color: var(--line) !important; }
 .navbar-toggler-icon { filter: invert(1); }
 
-/* --- PAGE HERO (subpages) --- */
 .page-hero { padding: 50px 0 30px; }
 .page-hero .eyebrow { color: var(--accent); font-size: 0.92rem; margin-bottom: 8px; }
 .page-hero h1 { font-size: 2.6rem; }
 
-/* --- section-level scroll reveal (one fade per section, not per card) --- */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
-/* --- HOME HERO --- */
 .hero-wrap { min-height: 82vh; display: flex; align-items: center; position: relative; overflow: hidden; }
 .hero-name { font-size: clamp(3.2rem, 6.5vw, 5.4rem); margin-bottom: 14px; letter-spacing: -2px; }
 .hero-name .surname {
@@ -150,7 +144,6 @@ a { color: var(--accent); }
 
 .band-alt { background: var(--bg-alt); }
 
-/* signature element: a quiet network-graph, nodding to her intrusion-detection research */
 .hero-graph {
     position: absolute; top: 0; right: -4%; height: 100%; width: 46%;
     pointer-events: none; z-index: 0;
@@ -202,7 +195,6 @@ a { color: var(--accent); }
 .hero-img-wrap:hover .hero-img-frame img { filter: grayscale(0%); transform: scale(1.03); }
 @media (max-width: 991px) { .hero-img-wrap::before { left: -12px; right: -12px; } }
 
-/* --- STAT ROW --- */
 .stat-row { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .stat-block { padding: 36px 20px; border-left: 1px solid var(--line); transition: background 0.3s ease; }
 .stat-block:first-child { border-left: none; }
@@ -215,7 +207,6 @@ a { color: var(--accent); }
 .stat-block:hover .stat-number::after { transform: scaleX(1); }
 .stat-label { color: var(--ink-soft); font-size: 0.85rem; margin-top: 14px; }
 
-/* --- TECH STRIP (logo chips) --- */
 .marquee-section { padding: 40px 0; border-bottom: 1px solid var(--line); overflow: hidden; }
 .marquee-title { color: var(--ink-soft); font-size: 0.85rem; margin-bottom: 22px; }
 .marquee-track-wrap {
@@ -246,7 +237,6 @@ a { color: var(--accent); }
 }
 .tech-chip span { font-size: 0.92rem; color: var(--ink); font-weight: 500; }
 
-/* --- PANELS (replaces glass-card) --- */
 .panel {
     border: 1px solid var(--line);
     border-radius: 6px;
@@ -489,7 +479,6 @@ footer.site-footer::before {
     background: linear-gradient(90deg, var(--accent), var(--accent-warm));
 }
 
-/* --- RESPONSIVENESS --- */
 @media (max-width: 991px) {
     .hero-wrap { text-align: center; padding-top: 30px; }
     .hero-socials { justify-content: center; }
@@ -583,7 +572,7 @@ footer.site-footer::before {
         <div class="row g-0 text-center">
             <div class="col-md-4 stat-block"><span class="stat-number">03</span><div class="stat-label">Major projects</div></div>
             <div class="col-md-4 stat-block"><span class="stat-number">90%+</span><div class="stat-label">Thesis model accuracy</div></div>
-            <div class="col-md-4 stat-block"><span class="stat-number">4+</span><div class="stat-label">Years of Coding Experience</div></div>
+            <div class="col-md-4 stat-block"><span class="stat-number">9/10</span><div class="stat-label">Statistically significant model comparisons</div></div>
         </div>
     </div>
 </section>
@@ -596,9 +585,10 @@ footer.site-footer::before {
                 <h2 class="section-title mb-4">About me</h2>
                 <p class="about-lead" style="font-size: 1.1rem; line-height: 1.75; max-width: 62ch;">
                     <span class="drop-cap">H</span>ello! I'm Mashruba Tasnem Oishi, a Computer Science & Engineering graduate of IUBAT.
-                    My undergraduate thesis focused on <strong>Explainable AI</strong> — building a leakage controlled, statistically validated,
-                    SHAP-explainable network intrusion detection framework on the UNSW-NB15 dataset,
-                    benchmarking Random Forest and XGBoost classifiers.
+                    My undergraduate thesis focused on <strong>Explainable AI</strong> — building a leakage-controlled, statistically validated
+                    (Holm-corrected McNemar, Nadeau–Bengio t-tests) network intrusion detection framework on UNSW-NB15 and CIC-IDS-2017,
+                    benchmarking Decision Tree, Random Forest, and XGBoost classifiers with SHAP and LIME explainability.
+                    The manuscript is currently submitted to <em>Annals of Data Science</em> (Springer Nature).
                 </p>
                 <p style="font-size: 1.1rem; line-height: 1.75; max-width: 62ch;">
                     I recently completed a Web Developer Internship at SoftDeft, where I designed and built a full-stack
@@ -695,38 +685,35 @@ footer.site-footer::before {
         <div class="section-kicker"><span>04</span><i></i></div>
         <h2 class="section-title mb-4">Projects</h2>
 
-        <!-- Project 1: Animal Rescue & Sanctuary Management System -->
-<a href="https://github.com/MashrubaTasnim/Animal-Rescue-Sanctuary-Management-System" target="_blank" class="project-row" style="text-decoration:none; color:inherit;">
-  <div class="project-index">01</div>
-  <div class="project-thumb"><img src="images/p1.jpg" alt="Animal Rescue & Sanctuary Management System"></div>
-  <div>
-    <h5>Animal Rescue & Sanctuary Management System</h5>
-    <p class="small mb-0" style="color:var(--ink-soft)">Full-stack PHP/MySQL platform with 5 role-based portals (Visitor, User, Rescuer, Vet, Admin), SSLCommerz payment integration with automated PDF receipts, a finance module tracking income/expenses across multiple funding sources, Groq-powered bilingual (Bengali/English) SOS triage, an AI chatbot, and a hybrid vet-finder using OpenStreetMap/Overpass API.</p>
-  </div>
-  <i class="fas fa-arrow-right project-arrow" aria-hidden="true"></i>
-</a>
+        <a href="https://github.com/MashrubaTasnim/Animal-Rescue-Sanctuary-Management-System" target="_blank" class="project-row" style="text-decoration:none; color:inherit;">
+          <div class="project-index">01</div>
+          <div class="project-thumb"><img src="images/p1.jpg" alt="Animal Rescue & Sanctuary Management System"></div>
+          <div>
+            <h5>Animal Rescue & Sanctuary Management System</h5>
+            <p class="small mb-0" style="color:var(--ink-soft)">Full-stack PHP/MySQL platform with 5 role-based portals (Visitor, User, Rescuer, Vet, Admin), SSLCommerz payment integration with automated PDF receipts, a finance module tracking income/expenses across multiple funding sources, Groq-powered bilingual (Bengali/English) SOS triage, an AI chatbot, and a hybrid vet-finder using OpenStreetMap/Overpass API.</p>
+          </div>
+          <i class="fas fa-arrow-right project-arrow" aria-hidden="true"></i>
+        </a>
 
-<!-- Project 2: XAI-NIDS Thesis Project -->
-<a href="https://github.com/MashrubaTasnim/xai-nids" target="_blank" class="project-row" style="text-decoration:none; color:inherit;">
-  <div class="project-index">02</div>
-  <div class="project-thumb"><img src="images/p2.png" alt="XAI-NIDS Thesis Project"></div>
-  <div>
-    <h5>XAI-NIDS: Explainable Intrusion Detection</h5>
-    <p class="small mb-0" style="color:var(--ink-soft)">Leakage-controlled, statistically validated ML framework for network intrusion detection. Achieved 90.52% accuracy / 90.43% F1 / 98.37% ROC-AUC with XGBoost on UNSW-NB15, with 9/10 pairwise model comparisons significant under Holm-corrected McNemar testing. SHAP and LIME explainability, independently validated on CIC-IDS-2017, plus a temporal (day-based) evaluation exposing generalization limits beyond standard random-split testing. Manuscript submitted to Annals of Data Science (Springer Nature).</p>
-  </div>
-  <i class="fas fa-arrow-right project-arrow" aria-hidden="true"></i>
-</a>
+        <a href="https://github.com/MashrubaTasnim/xai-nids" target="_blank" class="project-row" style="text-decoration:none; color:inherit;">
+          <div class="project-index">02</div>
+          <div class="project-thumb"><img src="images/p2.png" alt="XAI-NIDS Thesis Project"></div>
+          <div>
+            <h5>XAI-NIDS: Explainable Intrusion Detection</h5>
+            <p class="small mb-0" style="color:var(--ink-soft)">Leakage-controlled, statistically validated ML framework for network intrusion detection. Achieved 90.52% accuracy / 90.43% F1 / 98.37% ROC-AUC with XGBoost on UNSW-NB15, with 9/10 pairwise model comparisons significant under Holm-corrected McNemar testing. SHAP and LIME explainability, independently validated on CIC-IDS-2017, plus a temporal (day-based) evaluation exposing generalization limits beyond standard random-split testing. Manuscript submitted to Annals of Data Science (Springer Nature).</p>
+          </div>
+          <i class="fas fa-arrow-right project-arrow" aria-hidden="true"></i>
+        </a>
 
-<!-- Project 3: Home Automation System (unchanged, add repo link if you have one) -->
-<div class="project-row">
-  <div class="project-index">03</div>
-  <div class="project-thumb"><img src="images/p3.avif" alt="Home Automation System"></div>
-  <div>
-    <h5>Home Automation System</h5>
-    <p class="small mb-0" style="color:var(--ink-soft)">Sensor-based smart home device control system built with C and Arduino.</p>
-  </div>
-  <i class="fas fa-arrow-right project-arrow" aria-hidden="true"></i>
-</div>
+        <div class="project-row">
+          <div class="project-index">03</div>
+          <div class="project-thumb"><img src="images/p3.avif" alt="Home Automation System"></div>
+          <div>
+            <h5>Home Automation System</h5>
+            <p class="small mb-0" style="color:var(--ink-soft)">Sensor-based smart home device control system built with C and Arduino.</p>
+          </div>
+          <i class="fas fa-arrow-right project-arrow" aria-hidden="true"></i>
+        </div>
     </div>
 </section>
 
@@ -740,6 +727,10 @@ footer.site-footer::before {
             <div class="tech-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="" loading="lazy"><span>Scikit-learn</span></div>
             <div class="tech-chip"><span class="mono">XG</span><span>XGBoost</span></div>
             <div class="tech-chip"><span class="mono">SH</span><span>SHAP</span></div>
+            <div class="tech-chip"><span class="mono">LI</span><span>LIME</span></div>
+            <div class="tech-chip"><span class="mono">RF</span><span>Random Forest</span></div>
+            <div class="tech-chip"><span class="mono">HF</span><span>Hugging Face API</span></div>
+            <div class="tech-chip"><span class="mono">GQ</span><span>Groq API</span></div>
             <div class="tech-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="" loading="lazy"><span>PHP</span></div>
             <div class="tech-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" loading="lazy"><span>MySQL</span></div>
             <div class="tech-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" loading="lazy"><span>Python</span></div>
@@ -761,6 +752,10 @@ footer.site-footer::before {
             <div class="tech-chip" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="" loading="lazy"><span>Scikit-learn</span></div>
             <div class="tech-chip" aria-hidden="true"><span class="mono">XG</span><span>XGBoost</span></div>
             <div class="tech-chip" aria-hidden="true"><span class="mono">SH</span><span>SHAP</span></div>
+            <div class="tech-chip" aria-hidden="true"><span class="mono">LI</span><span>LIME</span></div>
+            <div class="tech-chip" aria-hidden="true"><span class="mono">RF</span><span>Random Forest</span></div>
+            <div class="tech-chip" aria-hidden="true"><span class="mono">HF</span><span>Hugging Face API</span></div>
+            <div class="tech-chip" aria-hidden="true"><span class="mono">GQ</span><span>Groq API</span></div>
             <div class="tech-chip" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="" loading="lazy"><span>PHP</span></div>
             <div class="tech-chip" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" loading="lazy"><span>MySQL</span></div>
             <div class="tech-chip" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" loading="lazy"><span>Python</span></div>
@@ -787,15 +782,15 @@ footer.site-footer::before {
             <div class="col-lg-6">
                 <div class="section-kicker"><span>05</span><i></i></div>
                 <h2 class="section-title mb-4">Academic history</h2>
-                <div class="timeline-item"><h5>International University of Business Agriculture & Technology (BSc. in CSE)</h5><p class="small" style="color:var(--accent)">2022 – 2026</p><p class="small" style="color:var(--ink-soft)">Undergraduate thesis on statistically validated, leakage-controlled, explainable ML for network intrusion detection.</p></div>
+                <div class="timeline-item"><h5>International University of Business Agriculture & Technology (BSc. in CSE)</h5><p class="small" style="color:var(--accent)">2022 – 2026</p><p class="small" style="color:var(--ink-soft)">Thesis: leakage-controlled, statistically validated, SHAP/LIME-explainable ML framework for network intrusion detection — 90.52% accuracy on UNSW-NB15, independently validated on CIC-IDS-2017.</p></div>
                 <div class="timeline-item"><h5>RAJUK Uttara Model College (HSC)</h5><p class="small" style="color:var(--accent)">2017 – 2019 · GPA 5.00/5.00</p></div>
                 <div class="timeline-item"><h5>RAJUK Uttara Model College (SSC)</h5><p class="small" style="color:var(--accent)">2015 – 2017 · GPA 5.00/5.00</p></div>
             </div>
             <div class="col-lg-6">
                 <div class="section-kicker"><span>06</span><i></i></div>
                 <h2 class="section-title mb-4">Professional log</h2>
-                <div class="timeline-item"><h5>Web Developer Intern, SoftDeft</h5><p class="small" style="color:var(--ink-soft)">02/2026 – 05/2026 · Built a full-stack animal rescue & sanctuary management platform.</p></div>
-                <div class="timeline-item"><h5>Undergraduate Thesis Researcher</h5><p class="small" style="color:var(--ink-soft)">05/2025 – 05/2026 · XAI-NIDS: statistically validated, leakage-controlled, explainable machine learning for network intrusion detection.</p></div>
+                <div class="timeline-item"><h5>Web Developer Intern, SoftDeft</h5><p class="small" style="color:var(--ink-soft)">02/2026 – 05/2026 · Built a role-based animal rescue & sanctuary platform with SSLCommerz payments, an AI triage/chatbot system, and a finance module.</p></div>
+                <div class="timeline-item"><h5>Undergraduate Thesis Researcher</h5><p class="small" style="color:var(--ink-soft)">05/2025 – 05/2026 · XAI-NIDS: 90.52% accuracy, Holm-corrected statistical validation, SHAP/LIME explainability. Manuscript submitted to Annals of Data Science.</p></div>
                 <div class="timeline-item"><h5>Academic tutor, Independent</h5><p class="small" style="color:var(--ink-soft)">01/2022 – Present · Teach ICT, CS, Mathematics and Science Subjects; build lesson plans and study materials tailored to each learner.</p></div>
             </div>
         </div>
@@ -891,7 +886,7 @@ footer.site-footer::before {
 
                 <div class="mt-5 pt-4 section-divider text-center">
                     <p style="color:var(--ink-soft)"><i class="fas fa-map-marker-alt me-2" style="color:var(--accent)"></i> Tongi, Gazipur, Bangladesh</p>
-                    <p class="mb-2"><a href="mailto:mashruba05@gmail.com" style="color:var(--ink); text-decoration:none;"><i class="fas fa-envelope me-2" style="color:var(--accent)"></i> mashruba05@gmail.com</a></p>
+                    <p class="mb-2"><a href="mailto:mashruba.cse@gmail.com" style="color:var(--ink); text-decoration:none;"><i class="fas fa-envelope me-2" style="color:var(--accent)"></i> mashruba.cse@gmail.com</a></p>
                     <p class="mb-4"><a href="tel:+8801407893956" style="color:var(--ink); text-decoration:none;"><i class="fas fa-phone me-2" style="color:var(--accent)"></i> +880 1407893956</a></p>
                     <div class="d-flex gap-2 justify-content-center hero-socials">
                         <a href="https://github.com/MashrubaTasnim" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -930,7 +925,6 @@ footer.site-footer::before {
         else { setTimeout(type, 60); }
     }
 
-    // subtle count-up for the stat row, tying into the overall polish pass
     function animateStats() {
         document.querySelectorAll(".stat-number").forEach(el => {
             const raw = el.textContent.trim();
@@ -962,8 +956,6 @@ footer.site-footer::before {
 </script>
 
 <script>
-    // interactive particle network for the hero — drifting nodes that react to the cursor,
-    // keeping the same "flagged / trace / normal" node language as the original graph
     (function () {
         const container = document.querySelector(".hero-graph");
         const canvas = document.getElementById("heroParticles");
@@ -1068,8 +1060,6 @@ footer.site-footer::before {
 </script>
 
 <script>
-    // global "wherever the mouse points" effect — an ambient glow that trails the cursor
-    // across the whole page, plus a small ring that grows over anything clickable
     (function () {
         if (!window.matchMedia("(pointer: fine)").matches) return;
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
